@@ -39,3 +39,10 @@ body {
     pointer-events: none;
     background-color: #45a049;
 }
+
+.commission-info {
+    text-align: center;
+}
+.commission-info p {
+    margin: 10px 0;
+}
