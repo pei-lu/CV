@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A collection of hands-on engineering projects spanning embedded systems, VR, PCB design, computer vision, and software.">
+  <meta name="theme-color" content="#f5f4ee">
+  <title>Project Library — Hardware, Software & Everything Between</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#projects">Skip to projects</a>
+  <header class="site-header wrap">
+    <a class="brand" href="#" aria-label="Project Library home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>PROJECT LIBRARY<span class="brand-period">.</span></a>
+    <nav aria-label="Main navigation"><a href="#projects">The collection <span aria-hidden="true">↗</span></a></nav>
+  </header>
+
+  <main>
+    <section class="collection wrap" id="projects" aria-labelledby="collection-title">
+      <div class="section-heading"><div><p class="eyebrow">The collection</p><h1 id="collection-title">Projects<span class="heading-count">09</span></h1></div></div>
+      <div class="library-controls" hidden>
+        <div class="filters" role="group" aria-label="Filter projects by discipline">
+          <button class="filter active" data-filter="all" aria-pressed="true">All projects <span>9</span></button>
+          <button class="filter" data-filter="hardware" aria-pressed="false">Hardware</button>
+          <button class="filter" data-filter="vr" aria-pressed="false">VR & interaction</button>
+          <button class="filter" data-filter="software" aria-pressed="false">Software & vision</button>
+          <button class="filter" data-filter="course" aria-pressed="false">Course projects</button>
+        </div>
+        <label class="search-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><span class="sr-only">Search projects</span><input id="project-search" type="search" placeholder="Find a project…" autocomplete="off"></label>
+      </div>
+      <p class="results-label" id="results-label" role="status" aria-live="polite" hidden>Showing all 9 projects</p>
+
+      <div class="project-grid" id="project-grid">
+        <article class="project" id="uslime" data-categories="hardware vr" aria-labelledby="uslime-title">
+          <div class="card-topline"><span class="eyebrow">01 / Embedded hardware</span><span class="project-symbol" aria-hidden="true">◇</span></div>
+          <h2 id="uslime-title">uSlime VR</h2>
+          <p>Reducing the size and weight of a SlimeVR tracker PCB to address motion-induced wobble caused by the original tracker's weight and balance.</p>
+          <div class="tags"><span>PCB design</span><span>ESP32</span><span>BNO085</span><span>I²C</span></div>
+          <details>
+            <summary>Inside the project <span aria-hidden="true">+</span></summary>
+            <div class="detail-content">
+              <p>The hardware work focused on a compact tracker layout. A logic analyzer captured I²C communication between the ESP32 and BNO085, helping identify a problem in the timing circuit during development.</p>
+              <p><strong>Focus:</strong> PCB miniaturization, motion tracking, and hardware debugging.</p>
+              <div class="project-images">
+                <figure class="project-image"><img src="assets/uSLime/pcb_front.png" alt="Front render of the uSlime VR tracker PCB with dimensions and component placement." width="897" height="742" loading="lazy"><figcaption>PCB front</figcaption></figure>
+                <figure class="project-image"><img src="assets/uSLime/pcb_back.png" alt="Back render of the uSlime VR tracker PCB with traces, connection pads, and cat silkscreen." width="588" height="641" loading="lazy"><figcaption>PCB back</figcaption></figure>
+                <figure class="project-image"><img src="assets/uSLime/addr_bridge.png" alt="Close-up of the uSlime PCB showing the 4A solder bridge pad highlighted with a red circle." width="922" height="570" loading="lazy"><figcaption>Address bridge detail</figcaption></figure>
+              </div>
+            </div>
+          </details>
+        </article>
+
+        <article class="project" data-categories="hardware software" aria-labelledby="envision-title">
+          <div class="card-topline"><span class="eyebrow">02 / Connected systems</span><span class="project-symbol" aria-hidden="true">⌘</span></div>
+          <h2 id="envision-title">Envision<br>user management</h2>
+          <p>A connected user management system for the lab, bringing together server software, ID-card authentication, and ESP32 devices.</p>
+          <div class="tags"><span>Python</span><span>Vite</span><span>MQTT</span><span>ESP32</span></div>
+          <details><summary>Inside the project <span aria-hidden="true">+</span></summary><div class="detail-content"><p>Work spans the Python backend, maintenance of the Vite frontend, deployment of an MQTT command server, and companion ESP32 firmware. Relay-based devices support ID-card authentication at multiple points, alongside day-to-day server operations.</p><p><strong>Focus:</strong> Connecting application software, device firmware, and lab infrastructure.</p></div></details>
+        </article>
+
+        <article class="project" data-categories="vr" aria-labelledby="ntpcue-title">
+          <div class="card-topline"><span class="eyebrow">03 / VR & interaction</span><span class="project-symbol" aria-hidden="true">◎</span></div>
+          <h2 id="ntpcue-title">NTPCue<br>eye-tracking research</h2>
+          <p>Building VR environments and user interactions for eye-tracking research, with fluid simulation as part of the scene work.</p>
+          <div class="tags"><span>Virtual reality</span><span>Interaction design</span><span>SlimeVR</span></div>
+          <details><summary>Inside the project <span aria-hidden="true">+</span></summary><div class="detail-content"><p>The work centers on VR scene construction and interaction design. It also includes setting up a SlimeVR-based full-body motion capture system for the lab, chosen for its ability to work without Lighthouse base stations and support flexible use in the lab environment.</p><p><strong>Focus:</strong> Research environments, simulation, and full-body motion capture.</p></div></details>
+        </article>
+
+        <article class="project" data-categories="hardware software" aria-labelledby="nfc-title">
+          <div class="card-topline"><span class="eyebrow">04 / PCB & tooling</span><span class="project-symbol coil-symbol" aria-hidden="true">▤</span></div>
+          <h2 id="nfc-title">NFC business card<br>& coil generator</h2>
+          <p>A custom NFC business card paired with a Python tool for generating coil layouts and calculating the electrical parameters behind them.</p>
+          <div class="tags"><span>KiCad</span><span>Python</span><span>NFC</span></div>
+          <details><summary>Inside the project <span aria-hidden="true">+</span></summary><div class="detail-content"><p>The card PCB is designed in KiCad. A companion Python script generates NFC coil files to suit design requirements, calculates the capacitance needed to tune the resonant frequency, and computes trace impedance.</p><p><strong>Focus:</strong> PCB layout and practical design automation.</p></div></details>
+        </article>
+
+        <article class="project" data-categories="hardware" aria-labelledby="fursuit-title">
+          <div class="card-topline"><span class="eyebrow">05 / Wearable electronics</span><span class="progress-label"><span class="signal-dot" aria-hidden="true"></span>In progress</span></div>
+          <h2 id="fursuit-title">Fursuit eyes<br>& fan controller</h2>
+          <p>A 433 MHz remote-controlled system that combines animated LED eyes and adjustable fan speeds in one wearable setup.</p>
+          <div class="tags"><span>433 MHz RF</span><span>Addressable LEDs</span><span>SPI LCD</span></div>
+          <details><summary>Inside the project <span aria-hidden="true">+</span></summary><div class="detail-content"><p>An external RF remote selects preprogrammed LED animation patterns and changes fan speed. A variant drives a small SPI LCD instead of using addressable LEDs for color changes and flowing light effects.</p><p><strong>Focus:</strong> Remote control, wearable lighting, and display variants. Development is ongoing.</p></div></details>
+        </article>
+
+        <article class="project" data-categories="hardware course" aria-labelledby="bicycle-title">
+          <div class="card-topline"><span class="eyebrow">06 / Course project</span><span class="project-symbol" aria-hidden="true">◈</span></div>
+          <h2 id="bicycle-title">Bicycle<br>anti-theft system</h2>
+          <p>A bicycle security project that uses a pair of BNO085 inertial sensors to detect unusual movement and trigger an alarm when armed.</p>
+          <div class="tags"><span>BNO085</span><span>IMU sensing</span><span>Movement detection</span></div>
+          <details><summary>Inside the project <span aria-hidden="true">+</span></summary><div class="detail-content"><p>Two IMUs are mounted on the bicycle. While the system is in its armed state, abnormal motion is used to trigger an audible alarm.</p><a class="text-link" href="https://sites.google.com/ucsd.edu/ece-196-team-1/home" target="_blank" rel="noopener noreferrer">Visit the course project site <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a></div></details>
+        </article>
+
+        <article class="project" data-categories="hardware course" aria-labelledby="pinball-title">
+          <div class="card-topline"><span class="eyebrow">07 / Course project</span><span class="project-symbol" aria-hidden="true">↯</span></div>
+          <h2 id="pinball-title">ESP32<br>pinball machine</h2>
+          <p>A pinball machine that connects ESP32 control with mechanical design and hands-on fabrication.</p>
+          <div class="tags"><span>ESP32</span><span>CAD</span><span>Laser cutting</span><span>PlatformIO</span></div>
+          <details><summary>Inside the project <span aria-hidden="true">+</span></summary><div class="detail-content"><p>The project combines CAD mechanical design, 3D modeling, and laser-cut fabrication with embedded development using PlatformIO.</p><p><strong>Focus:</strong> Bringing physical mechanisms and microcontroller software into one working build.</p></div></details>
+        </article>
+
+        <article class="project" data-categories="software course" aria-labelledby="vision-title">
+          <div class="card-topline"><span class="eyebrow">08 / Course projects</span><span class="project-symbol" aria-hidden="true">⌗</span></div>
+          <h2 id="vision-title">Computer vision<br>explorations</h2>
+          <p>A collection of vision projects, from reconstructing indoor environments to detecting brine shrimp for a friend's lab.</p>
+          <div class="tags"><span>YOLO</span><span>Image reconstruction</span><span>IMU & LiDAR</span></div>
+          <details><summary>Inside the projects <span aria-hidden="true">+</span></summary><div class="detail-content"><ul><li>Robot image capture and reconstruction using IMU and LiDAR data to rebuild indoor maps and recover 360-degree panoramic imagery.</li><li>YOLO-based brine shrimp detection to help a lab count specimens.</li><li>Foundational edge detection and image classification projects.</li></ul><p><strong>Focus:</strong> Extracting useful information from images and sensor data.</p></div></details>
+        </article>
+
+        <article class="project" data-categories="software course" aria-labelledby="eightball-title">
+          <div class="card-topline"><span class="eyebrow">09 / Course project</span><span class="eight-ball" aria-hidden="true">8</span></div>
+          <h2 id="eightball-title">Magic 8 Ball</h2>
+          <p>An introductory software engineering project built to explore a full web stack and learn the CI/CD pipeline.</p>
+          <div class="tags"><span>HTML / CSS / JavaScript</span><span>Python</span><span>CI/CD</span></div>
+          <details><summary>Inside the project <span aria-hidden="true">+</span></summary><div class="detail-content"><p>A web frontend built with HTML, CSS, and JavaScript connects to a Python backend. The project serves as a practical introduction to software development and continuous integration and deployment workflows.</p><p><strong>Focus:</strong> Learning how frontend, backend, and delivery workflows fit together.</p></div></details>
+        </article>
+      </div>
+      <div class="empty-state" id="empty-state" hidden><span aria-hidden="true">⌕</span><h2>No projects found.</h2><p>Try another keyword or explore the full collection.</p><button type="button" id="reset-filters">Show all projects <span aria-hidden="true">↗</span></button></div>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap"><span>PROJECT LIBRARY<span class="brand-period">.</span></span><span>Hardware. Software. Hands-on exploration.</span><a href="#">Back to top <span aria-hidden="true">↑</span></a></footer>
+</body>
+</html>
